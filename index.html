@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Akshay Shetty — Project Coordinator & Business Analyst</title>
+  <meta name="description" content="Akshay Shetty — Project Coordinator & Business Analyst. ERP implementation, project coordination, requirements gathering, stakeholder communication. Toronto, Canada (open to relocation)." />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <style>
+    :root{
+      --bg:#f7f9fb;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent:#0b5ed7; /* professional blue */
+      --accent-2:#0a66c2;
+      --radius:12px;
+      --maxw:980px;
+      --gap:20px;
+      --shadow: 0 6px 18px rgba(12, 24, 48, 0.08);
+      --sans: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    /* Basic reset */
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      background:linear-gradient(180deg, var(--bg), #eef3f9);
+      color:#0f1724;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding:32px 20px;
+      display:flex;
+      justify-content:center;
+    }
+    .container{
+      max-width:var(--maxw);
+      width:100%;
+      background:transparent;
+    }
+
+    /* Card */
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(15,23,36,0.03);
+    }
+
+    /* Header */
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+      margin-bottom:18px;
+    }
+    .name{
+      font-size:20px;
+      font-weight:700;
+      letter-spacing:0.2px;
+    }
+    .title{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+    }
+    .contact{
+      text-align:right;
+      font-size:13px;
+      color:var(--muted);
+    }
+    .contact a{ color:var(--accent); text-decoration:none; }
+    .contact a:focus, .contact a:hover { text-decoration:underline; outline: none; }
+
+    /* Grid layout */
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:var(--gap);
+      align-items:start;
+    }
+    @media (max-width:920px){
+      .grid{grid-template-columns:1fr}
+      .contact{text-align:left}
+    }
+
+    /* Left column */
+    .hero{
+      margin-bottom:12px;
+    }
+    .summary{
+      font-size:14px;
+      color:#0f1724;
+      margin:8px 0 16px 0;
+    }
+
+    /* Section headings */
+    h2.section{
+      font-size:14px;
+      margin:0 0 10px 0;
+      color:var(--accent-2);
+      font-weight:700;
+    }
+    .section-block{margin-bottom:18px;}
+
+    /* Skill chips */
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{
+      background:#f2f6ff;
+      color:var(--accent-2);
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:12px;
+      border:1px solid rgba(11,94,215,0.06);
+    }
+
+    /* Experience / Projects list */
+    .item{
+      background:linear-gradient(180deg, #fff, #fbfdff);
+      padding:12px;
+      border-radius:10px;
+      border:1px solid rgba(12,24,48,0.04);
+      margin-bottom:12px;
+    }
+    .item h3{
+      margin:0;
+      font-size:14px;
+      font-weight:700;
+    }
+    .meta{font-size:12px;color:var(--muted); margin-bottom:8px}
+    .item ul{margin:6px 0 0 18px;padding:0;color:#15304a}
+    .item ul li{margin-bottom:6px;font-size:13px}
+
+    /* Right column */
+    aside.card {
+      padding:20px;
+      position:sticky;
+      top:28px;
+      align-self:start;
+      height:fit-content;
+    }
+    .boxed{
+      background:#fbfdff;
+      border-radius:10px;
+      padding:12px;
+      margin-bottom:12px;
+      border:1px solid rgba(12,24,48,0.04);
+    }
+    .resume-btn{
+      display:inline-block;
+      background:linear-gradient(180deg,var(--accent), var(--accent-2));
+      color:#fff;
+      padding:10px 14px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:700;
+      font-size:14px;
+      box-shadow:0 6px 18px rgba(11,94,215,0.12);
+    }
+    .resume-btn:focus{ outline:3px solid rgba(11,94,215,0.18) }
+
+    /* Contact form fallback */
+    form.contact-form{ display:flex; flex-direction:column; gap:8px; }
+    .form-row input, .form-row textarea{
+      width:100%;
+      padding:10px;
+      border-radius:8px;
+      border:1px solid rgba(12,24,48,0.08);
+      font-size:13px;
+      resize:vertical;
+    }
+    .form-row textarea{ min-height:100px; }
+
+    /* Footer */
+    footer{font-size:12px;color:var(--muted); text-align:center; margin-top:16px}
+
+    /* Small touches */
+    .tag{ font-size:12px; color:var(--muted); background:transparent; padding:4px 6px; border-radius:6px; }
+    a.inline-link{ color:var(--accent); text-decoration:none; font-weight:600 }
+    .sr-only{ position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
+
+    /* Print friendly */
+    @media print{
+      body{padding:0;background:white}
+      .card, aside.card{box-shadow:none;border:none}
+      .resume-btn{display:none}
+    }
+  </style>
+
+  <!-- JSON-LD for structured data (update contact info if needed) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Akshay Shetty",
+    "jobTitle":"Project Coordinator | Business Analyst",
+    "address":"Toronto, ON, Canada",
+    "email":"mailto:subamshetty@gmail.com",
+    "sameAs":["https://www.linkedin.com/in/shetty-subam"],
+    "description":"Project Coordinator and Business Analyst experienced in ERP implementations (SAP, Microsoft Dynamics 365, Oracle), requirements gathering, stakeholder engagement and project coordination."
+  }
+  </script>
+</head>
+<body>
+  <main class="container" role="main" aria-labelledby="page-title">
+    <div class="card" id="page">
+      <header>
+        <div>
+          <div class="name" id="page-title">Akshay Shetty</div>
+          <div class="title">Project Coordinator • Business Analyst — ERP & Capital Projects</div>
+        </div>
+        <div class="contact" aria-label="Contact details">
+          <div>Toronto, ON (Open to relocation)</div>
+          <div><a href="mailto:subamshetty@gmail.com">subamshetty@gmail.com</a> • (437) 425-1674</div>
+          <div><a class="inline-link" href="https://www.linkedin.com/in/shetty-subam" target="_blank" rel="noopener">linkedin.com/in/shetty-subam</a></div>
+        </div>
+      </header>
+
+      <div class="grid" role="region" aria-label="Main content">
+        <!-- LEFT COLUMN -->
+        <section>
+          <div class="hero">
+            <p class="summary">
+              Results-driven Project Coordinator and Business Analyst with 4+ years supporting ERP implementations, capital, and infrastructure projects. Skilled at coordinating cross-functional teams, documenting requirements, driving UAT and training, and ensuring alignment between business, IT and vendors. Proficient with SAP, Microsoft Dynamics 365, and Oracle ERP; experienced with MS Project, SharePoint and Jira.
+            </p>
+          </div>
+
+          <!-- Projects / Experience -->
+          <div class="section-block" aria-labelledby="experience-heading">
+            <h2 class="section" id="experience-heading">Selected Experience</h2>
+
+            <article class="item" aria-labelledby="exp1-title">
+              <h3 id="exp1-title">Project Coordinator — ERP & Infrastructure</h3>
+              <div class="meta">Inode Technologies, Bangalore (Nov 2018 – Dec 2022)</div>
+              <ul>
+                <li>Coordinated ERP implementation activities, aligning business stakeholders, IT teams and vendors to support delivery milestones.</li>
+                <li>Maintained project schedule, RAID logs and governance artifacts to enable regular status reporting and decision-making.</li>
+                <li>Supported UAT planning, facilitated user training sessions, and assisted with post-deployment transition and hypercare activities.</li>
+                <li>Collaborated with engineering and operations teams on design reviews and commissioning readiness for infrastructure projects.</li>
+              </ul>
+            </article>
+
+            <article class="item" aria-labelledby="proj1-title">
+              <h3 id="proj1-title">Business Analysis — Requirements & Process Improvement</h3>
+              <div class="meta">Cross-functional assignments (ERP & business systems)</div>
+              <ul>
+                <li>Gathered and documented business requirements; created process maps and functional specifications for ERP modules.</li>
+                <li>Conducted gap analysis and translated stakeholder needs into user stories and acceptance criteria for development teams.</li>
+                <li>Prepared test scenarios and assisted product owners during UAT to validate business outcomes.</li>
+              </ul>
+            </article>
+
+            <article class="item" aria-labelledby="proj2-title">
+              <h3 id="proj2-title">Operations & Commissioning Support</h3>
+              <div class="meta">Capital projects and vendor coordination</div>
+              <ul>
+                <li>Supported procurement activities, prepared RFQs and assisted vendor evaluations for procurement of project materials.</li>
+                <li>Coordinated QA/QC documentation and facilitated handover activities in collaboration with stakeholders.</li>
+              </ul>
+            </article>
+          </div>
+
+          <!-- Skills -->
+          <div class="section-block" aria-labelledby="skills-heading">
+            <h2 class="section" id="skills-heading">Core Skills</h2>
+            <div class="skills" aria-hidden="false">
+              <span class="chip">ERP: SAP</span>
+              <span class="chip">Microsoft Dynamics 365</span>
+              <span class="chip">Oracle ERP</span>
+              <span class="chip">Project Coordination</span>
+              <span class="chip">Requirements Gathering</span>
+              <span class="chip">UAT & Training</span>
+              <span class="chip">MS Project</span>
+              <span class="chip">SharePoint</span>
+              <span class="chip">Jira</span>
+              <span class="chip">Stakeholder Communication</span>
+              <span class="chip">Agile & Waterfall</span>
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div class="section-block" aria-labelledby="edu-heading">
+            <h2 class="section" id="edu-heading">Education</h2>
+            <div class="item" style="padding:12px; margin-bottom:0;">
+              <div class="meta">Master of Science (Project Management) — Northeastern University, Toronto</div>
+              <div class="meta">Bachelor of Engineering (Electronics & Communication) — SDMCET, India</div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- RIGHT COLUMN -->
+        <aside class="card" aria-label="Side panel">
+          <div class="boxed" aria-labelledby="certs-heading">
+            <h3 class="section" id="certs-heading" style="margin-bottom:8px;">Certifications</h3>
+            <div class="tag" style="margin-bottom:8px;">PMP (in progress) — PMI</div>
+            <div class="tag" style="margin-bottom:8px;">SAP ABAP Certification — SAP</div>
+            <div class="tag" style="margin-bottom:8px;">Cybersecurity Foundations — PMI</div>
+            <div class="tag" style="margin-bottom:8px;">Kanban for Developers — PMI</div>
+            <div class="tag">Project Management: Requirements — PMI</div>
+          </div>
+
+          <div class="boxed" aria-labelledby="resume-heading">
+            <h3 class="section" id="resume-heading">Resume</h3>
+            <!-- IMPORTANT: Replace the href with the actual path where you host your resume file -->
+            <p style="margin:8px 0 12px 0; color:var(--muted); font-size:13px;">Download the one-page ATS-optimized resume (Word).</p>
+            <a class="resume-btn" href="assets/Akshay_Resume.docx" download>Download Resume</a>
+          </div>
+
+          <div class="boxed" aria-labelledby="contact-heading">
+            <h3 class="section" id="contact-heading">Contact</h3>
+            <p class="meta" style="margin:6px 0 10px 0;">Prefer direct contact? Click to email or use the form below.</p>
+            <p style="margin:6px 0"><a class="inline-link" href="mailto:subamshetty@gmail.com">subamshetty@gmail.com</a></p>
+
+            <!-- Fallback form: this example uses mailto as fallback. For production use, connect to Formspree / Netlify forms / server endpoint -->
+            <form class="contact-form" action="mailto:subamshetty@gmail.com" method="post" enctype="text/plain">
+              <label class="sr-only" for="name">Name</label>
+              <input id="name" name="Name" placeholder="Your name" required />
+              <label class="sr-only" for="email">Email</label>
+              <input id="email" name="Email" placeholder="Your email" required />
+              <label class="sr-only" for="message">Message</label>
+              <textarea id="message" name="Message" placeholder="Brief message" required></textarea>
+              <button type="submit" class="resume-btn" style="background:linear-gradient(180deg,#0b5ed7,#0a66c2);">Send</button>
+            </form>
+            <p style="font-size:12px;color:var(--muted);margin-top:8px;">Or connect on <a class="inline-link" href="https://www.linkedin.com/in/shetty-subam" target="_blank" rel="noopener">LinkedIn</a>.</p>
+          </div>
+          
+          <div style="font-size:12px;color:var(--muted);margin-top:10px;">
+            <strong>Location</strong><br/>Toronto, ON • Open to Canada-wide relocation
+          </div>
+        </aside>
+      </div>
+
+      <footer>
+        <small>© <span id="yr"></span> Akshay Shetty — Project Coordinator & Business Analyst • Designed for recruiters</small>
+      </footer>
+    </div>
+  </main>
+
+  <script>
+    // Small helpers
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // Smooth keyboard focus for anchor clicks (accessibility)
+    (function(){
+      var links = document.querySelectorAll('a[href^="#"]');
+      links.forEach(function(a){
+        a.addEventListener('click', function(e){
+          var id = this.getAttribute('href').slice(1);
+          var el = document.getElementById(id);
+          if(el){ el.setAttribute('tabindex','-1'); el.focus(); }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
