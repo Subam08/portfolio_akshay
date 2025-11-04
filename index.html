@@ -1,82 +1,155 @@
-<!DOCTYPE html>
+
 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Akshay Shetty Portfolio</title>
+
+  <!-- Fonts & Icons -->
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Meta & Favicon -->
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <meta name="description" content="Akshay Shetty — Project Coordinator & ERP Professional. Portfolio showcasing project management expertise and ERP implementations.">
+
   <style>
     /* General Styles */
     * { margin:0; padding:0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
-    body { background-color: #f5f5f5; color: #333; line-height: 1.6; }
+    body { background-color: #f5f5f5; color: #333; line-height: 1.8; font-size: 17px; }
     a { text-decoration: none; color: inherit; }
     img { max-width: 100%; }
+    h1, h2, h3 { letter-spacing: 0.5px; }
 
-```
-/* Navbar */
-nav { background-color: #0d1b2a; color: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
-nav .logo { font-weight: 600; font-size: 20px; color: #00aaff; }
-nav ul { display: flex; gap: 20px; list-style: none; }
-nav ul li { transition: 0.3s; cursor: pointer; }
-nav ul li:hover { color: #00aaff; }
+    /* Navbar */
+    nav { background-color: #0d1b2a; color: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+    nav .logo { font-weight: 600; font-size: 20px; color: #00aaff; }
+    nav ul { display: flex; gap: 20px; list-style: none; }
+    nav ul li { transition: 0.3s; cursor: pointer; }
+    nav ul li:hover { color: #00aaff; }
 
-/* Hero Section */
-.hero { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 100px 20px; background: linear-gradient(135deg, #0d1b2a, #1b263b); color: white; }
-.hero h1 { font-size: 40px; margin-bottom: 10px; }
-.hero p { font-size: 18px; margin-bottom: 20px; }
-.hero .btn { padding: 10px 25px; margin: 5px; border: none; background-color: #00aaff; color: white; cursor: pointer; border-radius: 5px; transition: 0.3s; }
-.hero .btn:hover { background-color: #0077aa; transform: scale(1.05); }
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(rgba(13,27,42,0.9), rgba(27,38,59,0.9)),
+                  url('office-bg.jpg') center/cover no-repeat;
+      color: white;
+    }
+    .hero h1 { font-size: 48px; font-weight: 700; margin-bottom: 10px; }
+    .hero p { font-size: 20px; margin-bottom: 20px; opacity: 0.9; }
+    .hero .btn {
+      padding: 12px 30px;
+      margin: 5px;
+      border: none;
+      background-color: #00aaff;
+      color: white;
+      cursor: pointer;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .hero .btn:hover {
+      background: linear-gradient(90deg,#0077aa,#00aaff);
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
 
-/* Sections */
-section { padding: 80px 20px; max-width: 1200px; margin: auto; }
-h2 { text-align: center; margin-bottom: 40px; font-size: 32px; color: #0d1b2a; }
+    /* Sections */
+    section { padding: 80px 20px; max-width: 1200px; margin: auto; }
+    h2 { text-align: center; margin-bottom: 40px; font-size: 32px; color: #0d1b2a; }
 
-/* About */
-.about { display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; align-items: center; opacity: 0; transform: translateY(50px); transition: 1s ease; }
-.about.visible { opacity: 1; transform: translateY(0); }
-.about .text { max-width: 600px; }
-.about .text p { margin-bottom: 15px; }
-.about img { border-radius: 10px; width: 300px; }
+    /* About */
+    .about { display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; align-items: center; opacity: 0; transform: translateY(50px); transition: 1s ease; }
+    .about.visible { opacity: 1; transform: translateY(0); }
+    .about .text { max-width: 600px; }
+    .about .text p { margin-bottom: 15px; }
+    .about img { border-radius: 10px; width: 300px; }
 
-/* Skills */
-.skills-container { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
-.skill { background-color: white; padding: 20px; border-radius: 10px; width: 250px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); opacity: 0; transform: translateY(50px); transition: 1s ease; }
-.skill.visible { opacity: 1; transform: translateY(0); }
-.skill h3 { margin-bottom: 10px; color: #0d1b2a; }
-.skill .progress { background-color: #e0e0e0; border-radius: 5px; overflow: hidden; height: 10px; }
-.skill .progress-bar { height: 10px; width: 0%; background-color: #00aaff; transition: 1s; }
+    /* Skills */
+    .skills-container { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+    .skill { background-color: white; padding: 20px; border-radius: 10px; width: 250px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); opacity: 0; transform: translateY(50px); transition: 1s ease; }
+    .skill.visible { opacity: 1; transform: translateY(0); }
+    .skill h3 { margin-bottom: 10px; color: #0d1b2a; }
+    .skill .progress { background-color: #e0e0e0; border-radius: 5px; overflow: hidden; height: 10px; }
+    .skill .progress-bar { height: 10px; width: 0%; background-color: #00aaff; transition: 1s; }
 
-/* Projects */
-.projects-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-.project-card { background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: 0.5s; opacity: 0; transform: translateY(50px); }
-.project-card.visible { opacity: 1; transform: translateY(0); }
-.project-card:hover { transform: translateY(-5px) scale(1.02); }
-.project-card h3 { margin-bottom: 10px; }
-.project-card p { font-size: 14px; color: #555; }
+    /* Projects */
+    .projects-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .project-card { background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: 0.5s; opacity: 0; transform: translateY(50px); }
+    .project-card.visible { opacity: 1; transform: translateY(0); }
+    .project-card:hover { transform: translateY(-5px) scale(1.02); }
+    .project-card h3 { margin-bottom: 10px; }
+    .project-card p { font-size: 14px; color: #555; }
 
-/* Resume / Contact */
-.contact, .resume { display: flex; flex-direction: column; align-items: center; gap: 20px; }
-.contact form { display: flex; flex-direction: column; gap: 15px; width: 100%; max-width: 500px; }
-.contact input, .contact textarea { padding: 10px; border-radius: 5px; border: 1px solid #ccc; }
-.contact button { padding: 10px; border: none; background-color: #00aaff; color: white; cursor: pointer; border-radius: 5px; transition: 0.3s; }
-.contact button:hover { background-color: #0077aa; transform: scale(1.05); }
+    /* Resume / Contact */
+    .contact, .resume { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+    #contact { background-color: #f0f4f8; padding: 80px 20px; }
+    .contact form {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .contact input, .contact textarea {
+      font-size: 16px;
+      border: 1px solid #ccc;
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .contact button {
+      padding: 10px;
+      border: none;
+      background-color: #00aaff;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    .contact button:hover { background-color: #0077aa; transform: scale(1.05); }
 
-/* Footer */
-footer { background-color: #0d1b2a; color: white; text-align: center; padding: 20px; }
-footer a { color: #00aaff; margin: 0 10px; }
+    /* Certifications */
+    #certifications {
+      background-color: #ffffff;
+      padding: 80px 20px;
+    }
+    .cert-list {
+      list-style: none;
+      max-width: 600px;
+      margin: auto;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+    .cert-list li::before {
+      content: "✔️";
+      color: #00aaff;
+      margin-right: 10px;
+    }
 
-/* Responsive */
-@media(max-width:768px){.about{flex-direction:column;}.hero h1{font-size:32px;}}
-```
+    /* Footer */
+    footer { background-color: #0d1b2a; color: white; text-align: center; padding: 20px; }
+    footer a { color: #00aaff; margin: 0 10px; }
 
+    /* Responsive */
+    @media(max-width:768px){
+      .about{flex-direction:column; text-align:center;}
+      .hero h1{font-size:32px;}
+      .about img{margin-top:20px;}
+    }
   </style>
+
 </head>
+
 <body>
-
   <!-- Navbar -->
-
   <nav>
     <div class="logo">Akshay Shetty</div>
     <ul>
@@ -92,7 +165,7 @@ footer a { color: #00aaff; margin: 0 10px; }
 
   <section class="hero">
     <h1>Akshay Shetty</h1>
-    <p> Project Coordinator | Enterprise Resource Planning | MS in Project Management</p>
+    <p>Project Coordinator | Enterprise Resource Planning | MS in Project Management</p>
     <div>
       <a href="#resume" class="btn">View Resume</a>
       <a href="#contact" class="btn">Contact Me</a>
@@ -106,11 +179,8 @@ footer a { color: #00aaff; margin: 0 10px; }
     <div class="about">
       <div class="text">
         <p>Hi, I’m Akshay Shetty — a passionate ERP and Project Management professional with over four years of experience delivering technology-driven and infrastructure projects across diverse industries. I enjoy transforming complex business challenges into efficient, results-oriented solutions through structured project management and innovative ERP systems.</p>
-
-<p>With a Master’s in Project Management from Northeastern University, Toronto, and hands-on experience in SAP, Microsoft Dynamics 365, and Oracle ERP, I bring a balance of technical expertise and strategic thinking. My approach blends Agile and PMBOK principles to ensure projects are delivered on time, within scope, and with maximum impact.</p>
-
-<p>I’m driven by continuous improvement, collaboration, and the belief that the right technology, when guided by clear project goals, can create lasting business value.</p>
-       
+        <p>With a Master’s in Project Management from Northeastern University, Toronto, and hands-on experience in SAP, Microsoft Dynamics 365, and Oracle ERP, I bring a balance of technical expertise and strategic thinking. My approach blends Agile and PMBOK principles to ensure projects are delivered on time, within scope, and with maximum impact.</p>
+        <p>I’m driven by continuous improvement, collaboration, and the belief that the right technology, when guided by clear project goals, can create lasting business value.</p>
       </div>
       <img src="LINKEDIN.jpg" alt="Akshay Shetty">
     </div>
@@ -121,41 +191,38 @@ footer a { color: #00aaff; margin: 0 10px; }
   <section id="skills">
     <h2>My Skills</h2>
     <div class="skills-container">
-<div class="skill">
-        <h3>Scope, Cost & Time Management</h3>
-        <div class="progress"><div class="progress-bar" data-width="90%"></div></div>
-      </div>
-<div class="skill">
-        <h3>Stakeholder Communication & Reporting</h3>
-        <div class="progress"><div class="progress-bar" data-width="90%"></div></div>
-      </div> 
-<div class="skill">
-        <h3>Project Planning & Scheduling</h3>
-        <div class="progress"><div class="progress-bar" data-width="90%"></div></div>
-      </div> 
-<div class="skill">
-        <h3>Risk and Change Management</h3>
-        <div class="progress"><div class="progress-bar" data-width="90%"></div></div>
-      </div>    
-<div class="skill">
-        <h3>RAID Log & Risk Register Maintenance</h3>
-        <div class="progress"><div class="progress-bar" data-width="90%"></div></div>
-      </div> 
       <div class="skill">
-        <h3>MS Project</h3>
-        <div class="progress"><div class="progress-bar" data-width="85%"></div></div>
+        <h3><i class="fas fa-tasks"></i> Scope, Cost & Time Management</h3>
+        <div class="progress"><div class="progress-bar" data-width="90%"></div></div>
       </div>
-      
       <div class="skill">
-        <h3>Agile (Scrum, Kanban) & Waterfall Methodologies</h3>
-        <div class="progress"><div class="progress-bar" data-width="70%"></div></div>
+        <h3><i class="fas fa-tasks"></i> Stakeholder Communication & Reporting</h3>
+        <div class="progress"><div class="progress-bar" data-width="90%"></div></div>
       </div>
-      
       <div class="skill">
-        <h3>Documentation & Compliance</h3>
-        <div class="progress"><div class="progress-bar" data-width="85%"></div></div>
+        <h3><i class="fas fa-tasks"></i> Project Planning & Scheduling</h3>
+        <div class="progress"><div class="progress-bar" data-width="90%"></div></div>
       </div>
-      
+      <div class="skill">
+        <h3><i class="fas fa-tasks"></i> Risk and Change Management</h3>
+        <div class="progress"><div class="progress-bar" data-width="90%"></div></div>
+      </div>
+      <div class="skill">
+        <h3><i class="fas fa-tasks"></i> Documentation & Compliance</h3>
+        <div class="progress"><div class="progress-bar" data-width="90%"></div></div>
+      </div>
+      <div class="skill">
+        <h3><i class="fas fa-tasks"></i> RAID Log & Risk Register Maintenance</h3>
+        <div class="progress"><div class="progress-bar" data-width="90%"></div></div>
+      </div>
+      <div class="skill">
+        <h3><i class="fas fa-tasks"></i> MS Project</h3>
+        <div class="progress"><div class="progress-bar" data-width="90%"></div></div>
+      </div>
+      <div class="skill">
+        <h3><i class="fas fa-tasks"></i> Agile (Scrum, Kanban) & Waterfall Methodologies</h3>
+        <div class="progress"><div class="progress-bar" data-width="90%"></div></div>
+      </div>
     </div>
   </section>
 
@@ -166,18 +233,18 @@ footer a { color: #00aaff; margin: 0 10px; }
     <div class="projects-container">
       <div class="project-card">
         <h3>ERP Implementation</h3>
-        <p>Worked on SAP ERP implementation and support for multiple business units, ensuring smooth deployment and data integration.</p>
+        <p>Led SAP ERP rollout for 3 business units — improved data accuracy by 25% and reduced reporting time by 40%.</p>
       </div>
       <div class="project-card">
         <h3>MS Project Scheduling</h3>
-        <p>Developed and maintained project schedules for engineering and capital projects, tracking progress and managing risks.</p>
+        <p>Developed detailed project schedules for engineering and capital projects using MS Project, enhancing visibility and reducing delays.</p>
       </div>
       <div class="project-card">
         <h3>Udyog ERP Setup</h3>
-        <p>Configured and deployed Udyog ERP solutions for clients, including data migration, user training, and support.</p>
+        <p>Configured and deployed ERP systems for client operations — streamlined processes and improved data consistency by 30%.</p>
       </div>
     </div>
-  </section> 
+  </section>
 
   <!-- Resume -->
 
@@ -188,6 +255,20 @@ footer a { color: #00aaff; margin: 0 10px; }
     </div>
   </section>
 
+  <!-- Certifications -->
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul class="cert-list">
+      <li>Project Management: Preventing Scope Creep – PMI</li>
+<li>Project Management Foundations: Requirements – PMI</li>
+<li>SAP ABAP Certification – SAP</li>
+      <li>SAP ERP Essential Training – SAP</li>
+      <li>Agile Software Development: Kanban for Developers – PMI</li>
+      <li>Cybersecurity Foundations: Governance, Risk, and Compliance – PMI</li>
+    </ul>
+  </section>
+
   <!-- Contact -->
 
   <section id="contact">
@@ -196,12 +277,11 @@ footer a { color: #00aaff; margin: 0 10px; }
       <form>
         <input type="text" placeholder="Your Name" required>
         <input type="email" placeholder="Your Email" required>
-        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <textarea rows="5" placeholder="Write your message here..." required></textarea>
         <button type="submit">Send Message</button>
       </form>
       <div>
-        <a href="https://www.linkedin.com/in/shetty-subam"  target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
-       
+        <a href="https://www.linkedin.com/in/shetty-subam" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
         <a href="mailto:subamshetty@gmail.com"><i class="fas fa-envelope fa-2x"></i></a>
       </div>
     </div>
@@ -210,22 +290,22 @@ footer a { color: #00aaff; margin: 0 10px; }
   <!-- Footer -->
 
   <footer>
-    &copy; 2025 Akshay Shetty | All Rights Reserved
+    <p>&copy; 2025 Akshay Shetty | All Rights Reserved</p>
+    <div>
+      <a href="https://www.linkedin.com/in/shetty-subam" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:subamshetty@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
   </footer>
 
   <!-- Scripts -->
 
   <script>
-    // Animate sections on scroll
     const sections = document.querySelectorAll('.about, .skill, .project-card');
-    const progressBars = document.querySelectorAll('.progress-bar');
-
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        if(entry.isIntersecting){
+        if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          // Animate progress bars
-          if(entry.target.classList.contains('skill')){
+          if (entry.target.classList.contains('skill')) {
             const bar = entry.target.querySelector('.progress-bar');
             bar.style.width = bar.getAttribute('data-width');
           }
